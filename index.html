@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Draw Something - Sinnig Media</title>
+  </head>
+  <body>
+
+    <div class="controls">
+      <label for="lineSize">Line Width:</label>
+      <input id="lineSize" type="range" name="lineSize" min="10" max="200" value="10" data-sizing="px">
+
+      <label for="base">Color:</label>
+      <input id="base" type="color" name="base" value="#ffc600">
+    </div>
+    
+    <canvas id="draw" width="800" height="800"></canvas>
+
+    <script src="scripts.js"></script>
+
+    <style>
+      :root {
+        --base: #ffc600;
+        --lineSize: 10px;
+      }
+
+      canvas {
+        font-size: var(--lineSize);
+        color: var(--base);
+      }
+
+      #draw {
+        color: var(--base);
+      }
+
+      html, body {
+        margin:0;
+      }
+    </style>
+
+  </body>
+</html>
